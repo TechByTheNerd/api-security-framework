@@ -4,6 +4,8 @@ import openai
 from decouple import config
 from colorama import Fore, Style
 import json
+from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
+import time
 
 # Get OpenAI API key from environment variables
 openai_api_key = config('OPENAI_API_KEY')
@@ -16,12 +18,14 @@ if not openai_api_key or len(openai_api_key) < 8:
 openai.api_key = openai_api_key
 
 class Agent(threading.Thread):
-    def __init__(self, id, task_queue, result_queue, lock):
+    def __init__(self, id, task_queue, result_queue, lock, progress, task_id):
         threading.Thread.__init__(self)
         self.id = id
         self.task_queue = task_queue
         self.result_queue = result_queue
         self.lock = lock
+        self.progress = progress
+        self.task_id = task_id
 
     def run(self):
         while True:
@@ -30,6 +34,7 @@ class Agent(threading.Thread):
                 result = self.process_task(task)
                 self.result_queue.put(result)
                 self.task_queue.task_done()
+                self.progress.update(self.task_id, advance=1)
             except queue.Empty:
                 break
 
@@ -96,24 +101,27 @@ def process_standards(standards_list, output_file_name, description):
 
     num_agents = 6
     lock = threading.Lock()
-    agents = [Agent(i, task_queue, result_queue, lock) for i in range(num_agents)]
+    with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), 
+                  BarColumn(), TextColumn("[progress.percentage]{task.percentage:>3.0f}%"), auto_refresh=True) as progress:
+        task_id = progress.add_task(f"[cyan]Processing...", total=len(standards_list))
+        agents = [Agent(i, task_queue, result_queue, lock, progress, task_id) for i in range(num_agents)]
 
-    print(Fore.CYAN + f"[*] Creating and starting {num_agents} agents to process {len(standards_list)} standards..." + Style.RESET_ALL)
-    for agent in agents:
-        agent.start()
+        print(Fore.CYAN + f"[*] Creating and starting {num_agents} agents to process {len(standards_list)} standards..." + Style.RESET_ALL)
+        for agent in agents:
+            agent.start()
 
-    print(Fore.CYAN + "[*] Waiting for all tasks to be processed" + Style.RESET_ALL)
-    task_queue.join()
+        print(Fore.CYAN + "[*] Waiting for all tasks to be processed" + Style.RESET_ALL)
+        task_queue.join()
 
-    results = []
-    while not result_queue.empty():
-        result = result_queue.get()
-        results.append(result)
+        results = []
+        while not result_queue.empty():
+            result = result_queue.get()
+            results.append(result)
 
-    with open(output_file_name, 'w') as f:
-        json.dump(results, f, indent=4)
+        with open(output_file_name, 'w') as f:
+            json.dump(results, f, indent=4)
 
-    print(Fore.GREEN + f"[+] Results written to {output_file_name}" + Style.RESET_ALL)
+        print(Fore.GREEN + f"[+] Results written to {output_file_name}" + Style.RESET_ALL)
 
 def main():
     
