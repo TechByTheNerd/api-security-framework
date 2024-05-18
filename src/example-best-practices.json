@@ -1,0 +1,2725 @@
+[
+    {
+        "standard": "ISO/IEC 27017 Security Techniques for Cloud Services",
+        "data": {
+            "standard": "ISO/IEC 27017 Security Techniques for Cloud Services",
+            "version": "2019",
+            "primary_url": "https://www.iso.org/standard/70693.html",
+            "scope": [
+                "Cloud Service Providers",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "API_Security": {
+                    "MUST": [
+                        {
+                            "requirement_id": "API-1",
+                            "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                            "requirement_abstract": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys.",
+                            "requirement_details_markdown_formatted": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                            "citation_link": "https://www.iso.org/standard/70693.html",
+                            "intended_audience": [
+                                "Developers",
+                                "Architects",
+                                "Security Engineers"
+                            ],
+                            "severity": "Critical"
+                        },
+                        {
+                            "requirement_id": "API-2",
+                            "requirement_text": "Ensure secure communication between APIs and clients.",
+                            "requirement_abstract": "APIs must communicate securely over encrypted channels using protocols such as HTTPS.",
+                            "requirement_details_markdown_formatted": "APIs must communicate securely over encrypted channels using protocols such as HTTPS.",
+                            "citation_link": "https://www.iso.org/standard/70693.html",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers",
+                                "Network Administrators"
+                            ],
+                            "severity": "High"
+                        }
+                    ],
+                    "SHOULD": [
+                        {
+                            "requirement_id": "API-3",
+                            "requirement_text": "Implement rate limiting and throttling mechanisms to protect APIs from abuse.",
+                            "requirement_abstract": "APIs should have rate limiting and throttling mechanisms in place to prevent abuse and potential denial of service attacks.",
+                            "requirement_details_markdown_formatted": "APIs should have rate limiting and throttling mechanisms in place to prevent abuse and potential denial of service attacks.",
+                            "citation_link": "https://www.iso.org/standard/70693.html",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers",
+                                "API Managers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    ],
+                    "MAY": [
+                        {
+                            "requirement_id": "API-4",
+                            "requirement_text": "Implement API key rotation and management procedures.",
+                            "requirement_abstract": "Organizations may consider implementing API key rotation and management procedures to enhance security.",
+                            "requirement_details_markdown_formatted": "Organizations may consider implementing API key rotation and management procedures to enhance security.",
+                            "citation_link": "https://www.iso.org/standard/70693.html",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers",
+                                "Compliance Officers"
+                            ],
+                            "severity": "Low"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "standard": "ISO 22301 Security and Resilience / Business Continuity",
+        "data": {
+            "standard": "ISO 22301 Security and Resilience / Business Continuity",
+            "version": "2021",
+            "primary_url": "https://www.iso.org/standard/75106.html",
+            "scope": [
+                "Organizations implementing API services",
+                "API developers",
+                "Security engineers"
+            ],
+            "requirements": [
+                {
+                    "API_Access_Control": {
+                        "MUST": {
+                            "requirement_id": "API-1",
+                            "requirement_text": "Implement strict access control mechanisms for all APIs.",
+                            "requirement_abstract": "All APIs must enforce proper access controls to protect against unauthorized access and misuse.",
+                            "requirement_details": "APIs should implement role-based access control (RBAC), attribute-based access control (ABAC), or other appropriate access control models to ensure that each user or system interacting with the API is allowed only the necessary actions and data.",
+                            "citation_link": "https://www.iso.org/standard/75106.html#access-control",
+                            "intended_audience": [
+                                "API developers",
+                                "Security engineers"
+                            ],
+                            "severity": "High"
+                        }
+                    },
+                    "API_Authentication": {
+                        "MUST": {
+                            "requirement_id": "API-2",
+                            "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                            "requirement_abstract": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys.",
+                            "requirement_details": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                            "citation_link": "https://www.iso.org/standard/75106.html#authentication",
+                            "intended_audience": [
+                                "API developers",
+                                "Security engineers"
+                            ],
+                            "severity": "Critical"
+                        }
+                    },
+                    "Data_Encryption": {
+                        "SHOULD": {
+                            "requirement_id": "API-3",
+                            "requirement_text": "Encrypt sensitive data transmitted through APIs.",
+                            "requirement_abstract": "Sensitive data transmitted over APIs should be encrypted to maintain confidentiality and integrity.",
+                            "requirement_details": "APIs should encrypt sensitive data using strong encryption algorithms (e.g., AES) to prevent unauthorized interception or tampering.",
+                            "citation_link": "https://www.iso.org/standard/75106.html#data-encryption",
+                            "intended_audience": [
+                                "API developers",
+                                "Security engineers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    },
+                    "Logging_and_Monitoring": {
+                        "SHOULD": {
+                            "requirement_id": "API-4",
+                            "requirement_text": "Implement comprehensive logging and monitoring for APIs.",
+                            "requirement_abstract": "APIs should log all relevant activities and events, and implement real-time monitoring for anomaly detection.",
+                            "requirement_details": "APIs should maintain logs of all API transactions, including requests, responses, errors, and security events. Real-time monitoring tools should be used to detect and respond to unusual patterns or behaviors.",
+                            "citation_link": "https://www.iso.org/standard/75106.html#logging-monitoring",
+                            "intended_audience": [
+                                "API developers",
+                                "Security engineers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    },
+                    "API_Security_Testing": {
+                        "MAY": {
+                            "requirement_id": "API-5",
+                            "requirement_text": "Conduct regular security testing of APIs.",
+                            "requirement_abstract": "Organizations may perform security testing on APIs to identify and remediate vulnerabilities.",
+                            "requirement_details": "Organizations should conduct regular security testing of APIs using static analysis, dynamic analysis, penetration testing, and other relevant methodologies to ensure that APIs are free from common security flaws.",
+                            "citation_link": "https://www.iso.org/standard/75106.html#security-testing",
+                            "intended_audience": [
+                                "Security engineers"
+                            ],
+                            "severity": "Low"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "ISO/IEC 27001 Information Security, Cybersecurity and Privacy Protection",
+        "data": {
+            "standard": "ISO/IEC 27001 Information Security, Cybersecurity and Privacy Protection",
+            "version": "2021",
+            "primary_url": "https://www.iso.org/iso-iec-27001-information-security.html",
+            "scope": [
+                "Information Security Professionals",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "API Security": {
+                    "MUST": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "APIs MUST validate and sanitize input data.",
+                        "requirement_abstract": "APIs must validate and sanitize all input data to prevent injection attacks and protect against malicious input.",
+                        "requirement_details": {
+                            "citation_link": "https://www.iso.org/isoiec27001.pdf",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "High"
+                        }
+                    },
+                    "SHOULD": {
+                        "requirement_id": "API-4",
+                        "requirement_text": "APIs SHOULD implement rate limiting and throttling mechanisms.",
+                        "requirement_abstract": "APIs should implement rate limiting and throttling to prevent abuse, DoS attacks, and ensure service availability.",
+                        "requirement_details": {
+                            "citation_link": "https://www.iso.org/isoiec27001.pdf",
+                            "intended_audience": [
+                                "Developers",
+                                "API Managers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    },
+                    "MAY": {
+                        "requirement_id": "API-5",
+                        "requirement_text": "APIs MAY implement API keys for access control.",
+                        "requirement_abstract": "APIs may use API keys as an additional layer of access control for certain resources or endpoints.",
+                        "requirement_details": {
+                            "citation_link": "https://www.iso.org/isoiec27001.pdf",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Low"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "MITRE ATT&CK Framework",
+        "data": {
+            "standard": "MITRE ATT&CK Framework for API Security",
+            "version": "2021",
+            "primary_url": "https://attack.mitre.org/",
+            "scope": [
+                "Security Engineers",
+                "API Developers",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "API_Authentication": {
+                    "MUST": [
+                        {
+                            "requirement_id": "API-1",
+                            "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                            "requirement_abstract": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys.",
+                            "requirement_details": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authentication",
+                            "intended_audience": [
+                                "Developers",
+                                "Architects",
+                                "Identity Providers"
+                            ],
+                            "severity": "Critical"
+                        }
+                    ],
+                    "SHOULD": [
+                        {
+                            "requirement_id": "API-2",
+                            "requirement_text": "Enforce strong password policies for API authentication.",
+                            "requirement_abstract": "Strong password policies that include complexity requirements must be enforced for API authentication to prevent unauthorized access.",
+                            "requirement_details": "Strong password policies should be enforced for API authentication to ensure secure access control. Passwords should have complexity requirements like minimum length, special characters, and regular expiration.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authentication",
+                            "intended_audience": [
+                                "Developers",
+                                "System Administrators"
+                            ],
+                            "severity": "High"
+                        }
+                    ],
+                    "MAY": [
+                        {
+                            "requirement_id": "API-3",
+                            "requirement_text": "Implement multi-factor authentication (MFA) for critical API operations.",
+                            "requirement_abstract": "Consider implementing multi-factor authentication (MFA) for critical API operations to add an extra layer of security.",
+                            "requirement_details": "Multi-factor authentication (MFA) can be implemented for critical API operations to enhance security. MFA requires users to provide multiple forms of verification before accessing sensitive resources.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authentication",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    ]
+                },
+                "API_Authorization": {
+                    "MUST": [
+                        {
+                            "requirement_id": "API-4",
+                            "requirement_text": "Enforce proper authorization controls for API access.",
+                            "requirement_abstract": "APIs must enforce proper authorization controls to ensure that only authorized users can access specific resources.",
+                            "requirement_details": "APIs should implement role-based access control (RBAC), attribute-based access control (ABAC), or similar mechanisms to enforce proper authorization. Unauthorized users should not be able to access sensitive data or perform restricted actions.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authorization",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Critical"
+                        }
+                    ],
+                    "SHOULD": [
+                        {
+                            "requirement_id": "API-5",
+                            "requirement_text": "Implement API rate limiting and throttling mechanisms.",
+                            "requirement_abstract": "API rate limiting and throttling mechanisms should be implemented to prevent abuse and protect against denial-of-service attacks.",
+                            "requirement_details": "API rate limiting and throttling should be implemented to control the number of requests a client can make over a period of time. This helps protect the API from abuse, accidental spikes, and malicious attacks.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authorization",
+                            "intended_audience": [
+                                "Developers",
+                                "API Administrators"
+                            ],
+                            "severity": "High"
+                        }
+                    ],
+                    "MAY": [
+                        {
+                            "requirement_id": "API-6",
+                            "requirement_text": "Monitor and log API access for auditing and compliance purposes.",
+                            "requirement_abstract": "Logging and monitoring of API access should be implemented to track usage, detect anomalies, and facilitate compliance audits.",
+                            "requirement_details": "API access should be logged and monitored to track usage patterns, detect suspicious activities, and investigate security incidents. Logging should include relevant details for auditing and compliance purposes.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authorization",
+                            "intended_audience": [
+                                "Security Engineers",
+                                "Compliance Officers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "standard": "ISO/IEC 27018 Security Techniques for PII in Public Cloud",
+        "data": {
+            "standard": "ISO/IEC 27018 Security Techniques for PII in Public Cloud",
+            "version": "2019",
+            "primary_url": "https://www.iso.org/standard/45353.html",
+            "scope": [
+                "Cloud Service Providers",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": [
+                {
+                    "API_Access_Control": {
+                        "MUST": {
+                            "requirement_id": "27018-API-1",
+                            "requirement_text": "Implement access control mechanisms to prevent unauthorized access to APIs.",
+                            "requirement_abstract": "Access control mechanisms must be in place to restrict access to APIs to only authorized users.",
+                            "requirement_details": {
+                                "Access control mechanisms": [
+                                    "Role-based access control (RBAC)",
+                                    "Attribute-based access control (ABAC)"
+                                ]
+                            },
+                            "citation_link": "https://www.iso.org/standard/45353.html",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "High"
+                        }
+                    }
+                },
+                {
+                    "API_Authentication": {
+                        "MUST": {
+                            "requirement_id": "27018-API-2",
+                            "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                            "requirement_abstract": "APIs must use strong authentication mechanisms to verify the identity of users and prevent unauthorized access.",
+                            "requirement_details": {
+                                "Strong authentication mechanisms": [
+                                    "OAuth 2.0",
+                                    "API keys",
+                                    "OpenID Connect"
+                                ]
+                            },
+                            "citation_link": "https://www.iso.org/standard/45353.html",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Critical"
+                        }
+                    }
+                },
+                {
+                    "API_Encryption": {
+                        "SHOULD": {
+                            "requirement_id": "27018-API-3",
+                            "requirement_text": "Encrypt sensitive data exchanged through APIs.",
+                            "requirement_abstract": "Sensitive data transmitted over APIs should be encrypted to protect it from unauthorized disclosure.",
+                            "requirement_details": {
+                                "Encryption protocols": [
+                                    "TLS",
+                                    "SSL"
+                                ]
+                            },
+                            "citation_link": "https://www.iso.org/standard/45353.html",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    }
+                },
+                {
+                    "API_Audit_Logs": {
+                        "MAY": {
+                            "requirement_id": "27018-API-4",
+                            "requirement_text": "Implement audit logs for API activities.",
+                            "requirement_abstract": "Logging of API activities can help in tracking and investigating security incidents.",
+                            "requirement_details": {
+                                "Logged information": [
+                                    "API calls",
+                                    "User identity",
+                                    "Timestamps"
+                                ]
+                            },
+                            "citation_link": "https://www.iso.org/standard/45353.html",
+                            "intended_audience": [
+                                "Security Engineers",
+                                "Compliance Officers"
+                            ],
+                            "severity": "Low"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "ISO/IEC 27035 Information Security Incident Management",
+        "data": {
+            "standard": "ISO/IEC 27035 Information Security Incident Management",
+            "version": "2019",
+            "primary_url": "https://www.iso.org/isoiec-27035-information-security-incident-management.html",
+            "scope": [
+                "Information Security Professionals",
+                "Incident Response Teams",
+                "API Developers"
+            ],
+            "requirements": {
+                "API_Security_Incident_Management": {
+                    "MUST": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "Regularly assess API security vulnerabilities and risks through penetration testing and API security reviews.",
+                        "requirement_abstract": "Organizations must conduct regular security assessments of APIs to identify vulnerabilities and risks.",
+                        "citation_link": "https://www.iso.org/isoiec-27035-information-security-incident-management.html",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "API Developers"
+                        ],
+                        "severity": "High"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "API-4",
+                        "requirement_text": "Implement access controls and authorization mechanisms to restrict API access based on roles and permissions.",
+                        "requirement_abstract": "Access controls and authorization mechanisms should be implemented to ensure proper API access restrictions.",
+                        "citation_link": "https://www.iso.org/isoiec-27035-information-security-incident-management.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Medium"
+                    },
+                    "MAY": {
+                        "requirement_id": "API-5",
+                        "requirement_text": "Monitor API traffic and behavior for anomalous activities that may indicate security incidents.",
+                        "requirement_abstract": "Organizations may consider implementing monitoring tools to detect abnormal API behavior.",
+                        "citation_link": "https://www.iso.org/isoiec-27035-information-security-incident-management.html",
+                        "intended_audience": [
+                            "Incident Response Teams",
+                            "Security Analysts"
+                        ],
+                        "severity": "Low"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "OWASP Top 10",
+        "data": {
+            "standard": "OWASP API Security Top 10",
+            "version": 2021,
+            "primary_url": "https://owasp.org/www-project-api-security/",
+            "scope": [
+                "API Developers",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": [
+                {
+                    "API_Authentication": {
+                        "MUST": {
+                            "requirement_id": "API-1",
+                            "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                            "requirement_abstract": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys.",
+                            "requirement_details_markdown_formatted": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authentication",
+                            "intended_audience": [
+                                "Developers",
+                                "Architects",
+                                "IdP Providers"
+                            ],
+                            "severity": "Critical"
+                        }
+                    }
+                },
+                {
+                    "Data_Encryption": {
+                        "MUST": {
+                            "requirement_id": "API-2",
+                            "requirement_text": "Encrypt sensitive data at rest and in transit.",
+                            "requirement_abstract": "Sensitive data should be encrypted when stored and when transmitted between systems.",
+                            "requirement_details_markdown_formatted": "Sensitive data should be encrypted using strong encryption algorithms both at rest and in transit. This helps protect data from unauthorized access and disclosure.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#data-encryption",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "High"
+                        }
+                    }
+                },
+                {
+                    "Rate_Limiting": {
+                        "SHOULD": {
+                            "requirement_id": "API-3",
+                            "requirement_text": "Implement rate limiting to prevent abuse and DDoS attacks.",
+                            "requirement_abstract": "Rate limiting should be applied to control the number of requests an API consumer can make within a specific time frame.",
+                            "requirement_details_markdown_formatted": "Rate limiting helps protect APIs from abuse, brute force attacks, and denial of service attacks by restricting the number of requests a client can make in a given time frame.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#rate-limiting",
+                            "intended_audience": [
+                                "Developers",
+                                "API Architects"
+                            ],
+                            "severity": "Medium"
+                        }
+                    }
+                },
+                {
+                    "Input_Validation": {
+                        "SHOULD": {
+                            "requirement_id": "API-4",
+                            "requirement_text": "Validate and sanitize all input data to prevent injection attacks.",
+                            "requirement_abstract": "Input data should be validated and sanitized to prevent injection attacks such as SQL injection and Cross-Site Scripting (XSS).",
+                            "requirement_details_markdown_formatted": "All input data, including parameters, headers, and payloads, should be validated and sanitized to prevent common injection attacks like SQL injection and Cross-Site Scripting (XSS). Proper input validation helps mitigate security risks.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#input-validation",
+                            "intended_audience": [
+                                "Developers",
+                                "QA Engineers"
+                            ],
+                            "severity": "High"
+                        }
+                    }
+                },
+                {
+                    "Error_Handling": {
+                        "SHOULD": {
+                            "requirement_id": "API-5",
+                            "requirement_text": "Implement proper error handling to avoid information leakage.",
+                            "requirement_abstract": "Error messages returned by APIs should be generic and not disclose sensitive information.",
+                            "requirement_details_markdown_formatted": "APIs should return generic error messages to prevent attackers from gaining insights into the system's internal workings and obtaining sensitive information. Proper error handling helps protect against information leakage.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#error-handling",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers",
+                                "Testers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    }
+                },
+                {
+                    "Auditing_and_Logging": {
+                        "MAY": {
+                            "requirement_id": "API-6",
+                            "requirement_text": "Implement auditing and logging of API activities.",
+                            "requirement_abstract": "Auditing and logging should be implemented to track API usage, detect anomalies, and investigate security incidents.",
+                            "requirement_details_markdown_formatted": "APIs should log all relevant activities and events to track usage, detect suspicious activities, and assist in incident response. Auditing and logging help organizations maintain visibility into API operations.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#auditing-and-logging",
+                            "intended_audience": [
+                                "Security Engineers",
+                                "Compliance Officers"
+                            ],
+                            "severity": "Low"
+                        }
+                    }
+                },
+                {
+                    "API_Schema_Validation": {
+                        "MUST": {
+                            "requirement_id": "API-7",
+                            "requirement_text": "Validate API schemas to ensure data integrity and security.",
+                            "requirement_abstract": "API payloads should be validated against predefined schemas to ensure data integrity and protect against data tampering.",
+                            "requirement_details_markdown_formatted": "APIs should validate incoming and outgoing data payloads against predefined schemas to ensure data integrity, compliance with expected formats, and protection against data manipulation attacks. Schema validation helps maintain data security.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#schema-validation",
+                            "intended_audience": [
+                                "Developers",
+                                "API Designers",
+                                "Security Analysts"
+                            ],
+                            "severity": "High"
+                        }
+                    }
+                },
+                {
+                    "API_Versioning": {
+                        "SHOULD": {
+                            "requirement_id": "API-8",
+                            "requirement_text": "Implement API versioning to manage changes and maintain backward compatibility.",
+                            "requirement_abstract": "API versioning should be used to control changes, maintain backward compatibility, and facilitate the transition between versions.",
+                            "requirement_details_markdown_formatted": "APIs should implement versioning to manage changes effectively, allow for backward compatibility, and ease the transition between different versions. Proper versioning practices help maintain API stability.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#api-versioning",
+                            "intended_audience": [
+                                "API Developers",
+                                "DevOps Engineers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    }
+                },
+                {
+                    "Access_Control": {
+                        "MUST": {
+                            "requirement_id": "API-9",
+                            "requirement_text": "Enforce proper access controls to protect sensitive resources.",
+                            "requirement_abstract": "API endpoints should enforce access controls to ensure that only authorized users can access sensitive resources.",
+                            "requirement_details_markdown_formatted": "Access controls should be in place to restrict access to sensitive resources based on user roles, permissions, and authentication status. Proper access controls help prevent unauthorized access and data breaches.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#access-control",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers",
+                                "Compliance Officers"
+                            ],
+                            "severity": "Critical"
+                        }
+                    }
+                },
+                {
+                    "Dependency_Management": {
+                        "SHOULD": {
+                            "requirement_id": "API-10",
+                            "requirement_text": "Manage dependencies securely to avoid known vulnerabilities.",
+                            "requirement_abstract": "Third-party dependencies used in APIs should be managed to mitigate risks associated with known vulnerabilities.",
+                            "requirement_details_markdown_formatted": "APIs should regularly monitor and update third-party dependencies to address known security vulnerabilities. Proper dependency management helps reduce the risk of exploitation through vulnerable components.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#dependency-management",
+                            "intended_audience": [
+                                "Developers",
+                                "DevOps Engineers"
+                            ],
+                            "severity": "High"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "OWASP API Security Top 10",
+        "data": {
+            "standard": "OWASP API Security Top 10",
+            "version": "2021",
+            "primary_url": "https://owasp.org/www-project-api-security/",
+            "scope": [
+                "All Industries",
+                "API Developers",
+                "Security Engineers"
+            ],
+            "requirements": {
+                "API_Authentication": {
+                    "MUST": {
+                        "requirement_id": "API-1",
+                        "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                        "requirement_abstract": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys.",
+                        "requirement_details": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authentication",
+                        "intended_audience": [
+                            "Developers",
+                            "Architects",
+                            "IdP Providers"
+                        ],
+                        "severity": "Critical"
+                    }
+                },
+                "Data_Encryption": {
+                    "SHOULD": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "Implement end-to-end encryption for sensitive data transmitted over APIs.",
+                        "requirement_abstract": "Sensitive data must be encrypted during transmission to protect against data breaches.",
+                        "requirement_details": "Sensitive data transmitted over APIs must be encrypted using secure protocols such as TLS to ensure confidentiality and integrity.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#data-encryption",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers",
+                            "Compliance Officers"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "Input_Validation": {
+                    "SHOULD": {
+                        "requirement_id": "API-3",
+                        "requirement_text": "Perform input validation to prevent injection attacks in API requests.",
+                        "requirement_abstract": "Input validation helps prevent common security vulnerabilities such as SQL Injection and XSS.",
+                        "requirement_details": "APIs should validate input data to protect against injection attacks, including SQL Injection and Cross-Site Scripting (XSS).",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#input-validation",
+                        "intended_audience": [
+                            "Developers",
+                            "QA Testers",
+                            "Security Analysts"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "Rate_Limiting": {
+                    "MAY": {
+                        "requirement_id": "API-4",
+                        "requirement_text": "Implement rate limiting to protect APIs from abuse and denial-of-service attacks.",
+                        "requirement_abstract": "Rate limiting helps control the traffic flow to APIs and prevents abuse.",
+                        "requirement_details": "APIs may implement rate limiting mechanisms to restrict the number of requests from a client within a specified time frame, which helps protect against abuse and denial-of-service attacks.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#rate-limiting",
+                        "intended_audience": [
+                            "Developers",
+                            "DevOps Engineers",
+                            "Network Administrators"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "Error_Handling": {
+                    "MAY": {
+                        "requirement_id": "API-5",
+                        "requirement_text": "Implement proper error handling to provide meaningful error messages to API consumers.",
+                        "requirement_abstract": "Effective error handling enhances the security and usability of APIs.",
+                        "requirement_details": "APIs may provide informative error messages with appropriate HTTP status codes to help API consumers troubleshoot issues and prevent security misconfigurations.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#error-handling",
+                        "intended_audience": [
+                            "Developers",
+                            "API Consumers",
+                            "Support Teams"
+                        ],
+                        "severity": "Low"
+                    }
+                },
+                "Logging_and_Monitoring": {
+                    "MAY": {
+                        "requirement_id": "API-6",
+                        "requirement_text": "Implement logging and monitoring capabilities to track and investigate API usage and security incidents.",
+                        "requirement_abstract": "Logging and monitoring help detect and respond to security threats in a timely manner.",
+                        "requirement_details": "APIs may log relevant events and monitor API traffic to identify and mitigate security incidents, such as unusual activity or potential breaches.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#logging-and-monitoring",
+                        "intended_audience": [
+                            "Security Operations",
+                            "Incident Response Teams",
+                            "Compliance Officers"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "Dependency_Management": {
+                    "SHOULD": {
+                        "requirement_id": "API-7",
+                        "requirement_text": "Regularly update and manage dependencies to address security vulnerabilities.",
+                        "requirement_abstract": "Vulnerabilities in third-party libraries can pose significant risks to API security.",
+                        "requirement_details": "APIs should keep dependencies up to date and monitor security advisories to patch known vulnerabilities promptly.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#dependency-management",
+                        "intended_audience": [
+                            "Developers",
+                            "DevOps Teams",
+                            "Security Teams"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "JWT_Validation": {
+                    "SHOULD": {
+                        "requirement_id": "API-8",
+                        "requirement_text": "Validate and secure JSON Web Tokens (JWT) used for authentication and authorization.",
+                        "requirement_abstract": "Improper validation of JWTs can lead to security weaknesses in APIs.",
+                        "requirement_details": "APIs should verify the integrity and authenticity of JWTs, including checking signature validity and enforcing expiration and issuer claims.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#jwt-validation",
+                        "intended_audience": [
+                            "Developers",
+                            "Identity Providers",
+                            "Security Architects"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "Audit_Trail": {
+                    "MAY": {
+                        "requirement_id": "API-9",
+                        "requirement_text": "Maintain an audit trail of API activities for compliance and security monitoring purposes.",
+                        "requirement_abstract": "Audit trails help enhance visibility and accountability in API usage.",
+                        "requirement_details": "APIs may log and retain information about API requests, responses, and access control decisions to support compliance audits and security investigations.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#audit-trail",
+                        "intended_audience": [
+                            "Compliance Officers",
+                            "Auditors",
+                            "Security Analysts"
+                        ],
+                        "severity": "Low"
+                    }
+                },
+                "API_Schema_Validation": {
+                    "MAY": {
+                        "requirement_id": "API-10",
+                        "requirement_text": "Validate incoming and outgoing data against a predefined schema to prevent data tampering.",
+                        "requirement_abstract": "Schema validation helps enforce data integrity and consistency in API communications.",
+                        "requirement_details": "APIs may use schema validation to ensure that data exchanged through the API conforms to a predefined structure and format, reducing the risk of data manipulation or tampering.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#schema-validation",
+                        "intended_audience": [
+                            "Developers",
+                            "API Consumers",
+                            "QA Testers"
+                        ],
+                        "severity": "Low"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "ISO/IEC 29100 Information Technology Privacy Framework",
+        "data": {
+            "standard": "ISO/IEC 29100 Information Technology Privacy Framework",
+            "version": "2011",
+            "primary_url": "https://www.iso.org/standard/61498.html",
+            "scope": [
+                "Organizations handling personal information",
+                "Privacy professionals",
+                "Security engineers"
+            ],
+            "requirements": {
+                "API_Security": {
+                    "MUST": {
+                        "requirement_id": "API-1",
+                        "requirement_text": "APIs handling personal information must implement strong authentication mechanisms.",
+                        "requirement_abstract": "APIs must use strong authentication mechanisms to ensure the security of personal information.",
+                        "requirement_details_markdown_formatted": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys to protect personal information. OAuth 2.0 is an open standard for access delegation commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                        "citation_link": "https://www.iso.org/standard/61498.html#section-7.2.1",
+                        "intended_audience": [
+                            "Developers",
+                            "Security engineers"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "APIs should encrypt personal data in transit using secure protocols.",
+                        "requirement_abstract": "Personal data transmitted over APIs should be encrypted using secure protocols.",
+                        "requirement_details_markdown_formatted": "Personal data transmitted over APIs should be encrypted using secure protocols such as TLS to protect confidentiality during transit.",
+                        "citation_link": "https://www.iso.org/standard/61498.html#section-7.3.2",
+                        "intended_audience": [
+                            "Developers",
+                            "Security engineers"
+                        ],
+                        "severity": "High"
+                    },
+                    "MAY": {
+                        "requirement_id": "API-3",
+                        "requirement_text": "APIs may implement rate limiting to protect against unauthorized access.",
+                        "requirement_abstract": "Consider implementing rate limiting to protect APIs from abuse.",
+                        "requirement_details_markdown_formatted": "Implementing rate limiting can help protect APIs from abuse by limiting the number of requests that can be made over a certain period of time.",
+                        "citation_link": "https://www.iso.org/standard/61498.html#section-7.4.1",
+                        "intended_audience": [
+                            "Developers",
+                            "Security engineers"
+                        ],
+                        "severity": "Medium"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "ISO/IEC 27032 Guidelines for Internet Security",
+        "data": {
+            "standard": "ISO/IEC 27032 Guidelines for Internet Security",
+            "version": "2012",
+            "primary_url": "https://www.iso.org/standard/44375.html",
+            "scope": [
+                "Developers",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "API_Authentication": {
+                    "MUST": {
+                        "requirement_id": "API-1",
+                        "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                        "requirement_abstract": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys.",
+                        "requirement_details_markdown_formatted": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authentication",
+                        "intended_audience": [
+                            "Developers",
+                            "Architects",
+                            "IdP Providers"
+                        ],
+                        "severity": "Critical"
+                    }
+                },
+                "API_Authorization": {
+                    "MUST": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "Implement proper authorization mechanisms for all API endpoints.",
+                        "requirement_abstract": "API endpoints must enforce proper authorization to ensure that only authorized users can access certain resources.",
+                        "requirement_details_markdown_formatted": "API endpoints must enforce proper authorization to ensure that only authorized users can access certain resources. This is typically achieved through role-based access control or attribute-based access control.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authorization",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "Data_Encryption": {
+                    "SHOULD": {
+                        "requirement_id": "API-3",
+                        "requirement_text": "Encrypt sensitive data transmitted over APIs.",
+                        "requirement_abstract": "Sensitive data transferred over APIs should be encrypted to protect it from unauthorized access.",
+                        "requirement_details_markdown_formatted": "Sensitive data transferred over APIs should be encrypted to protect it from unauthorized access. Transport Layer Security (TLS) should be used to secure communications between clients and servers.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#encryption",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "API_Logging": {
+                    "SHOULD": {
+                        "requirement_id": "API-4",
+                        "requirement_text": "Implement logging and monitoring for API activities.",
+                        "requirement_abstract": "APIs should log relevant events and monitor activities to detect and respond to security incidents.",
+                        "requirement_details_markdown_formatted": "APIs should log relevant events and monitor activities to detect and respond to security incidents. Logging should capture request and response details, errors, user actions, and any suspicious activities.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#logging",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Operations"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "Security_Headers": {
+                    "SHOULD": {
+                        "requirement_id": "API-5",
+                        "requirement_text": "Set proper security headers in API responses.",
+                        "requirement_abstract": "API responses should include security headers to enhance protection against common web security vulnerabilities.",
+                        "requirement_details_markdown_formatted": "API responses should include security headers to enhance protection against common web security vulnerabilities. Headers like Content-Security-Policy, X-Content-Type-Options, and Strict-Transport-Security can help mitigate risks.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#headers",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Low"
+                    }
+                },
+                "Rate_Limiting": {
+                    "MAY": {
+                        "requirement_id": "API-6",
+                        "requirement_text": "Consider implementing rate limiting to protect APIs from abuse.",
+                        "requirement_abstract": "Rate limiting can help prevent abuse, protect against denial-of-service (DoS) attacks, and manage API usage effectively.",
+                        "requirement_details_markdown_formatted": "Rate limiting can help prevent abuse, protect against denial-of-service (DoS) attacks, and manage API usage effectively. By setting limits on the number of requests clients can make within a specified time frame, APIs can maintain availability and performance.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#rate-limiting",
+                        "intended_audience": [
+                            "Developers",
+                            "DevOps Engineers"
+                        ],
+                        "severity": "Info"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "NIST Digital Identity Guidelines (SP 800-63*)",
+        "data": null
+    },
+    {
+        "standard": "ISO/IEC 27701 Security Techniques for Privacy Information Management",
+        "data": {
+            "standard": "ISO/IEC 27701 Security Techniques for Privacy Information Management",
+            "version": "2019",
+            "primary_url": "https://www.iso.org/standard/73984.html",
+            "scope": [
+                "Organizations handling personal information",
+                "Privacy professionals",
+                "Security engineers"
+            ],
+            "requirements": {
+                "Data_Privacy_Impact_Assessment": {
+                    "MUST": {
+                        "requirement_id": "DPIA-1",
+                        "requirement_text": "Conduct Data Privacy Impact Assessments (DPIA) for all APIs handling personal information.",
+                        "requirement_abstract": "Organizations must assess the impact of their APIs on the privacy of individuals by conducting DPIAs.",
+                        "requirement_details": "DPIA is a process to help identify and minimize the privacy risks of new projects or policies. It is essential for ensuring that personal data processing complies with GDPR and privacy regulations.",
+                        "citation_link": "https://www.iso.org/standard/61498.html",
+                        "intended_audience": [
+                            "Privacy professionals",
+                            "Data protection officers",
+                            "Compliance teams"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "DPIA-2",
+                        "requirement_text": "Include Data Privacy Impact Assessment results in API documentation.",
+                        "requirement_abstract": "API documentation should transparently communicate the DPIA results to relevant stakeholders.",
+                        "requirement_details": "By including DPIA results in API documentation, organizations can demonstrate compliance with privacy regulations and provide transparency to data subjects.",
+                        "citation_link": "https://gdpr-info.eu/",
+                        "intended_audience": [
+                            "Developers",
+                            "Compliance teams",
+                            "Regulators"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "Data_Minimization": {
+                    "MUST": {
+                        "requirement_id": "DM-1",
+                        "requirement_text": "Implement data minimization practices in API design and development.",
+                        "requirement_abstract": "Only collect, process, and store personal data that is necessary for the intended purpose.",
+                        "requirement_details": "Data minimization is a fundamental privacy principle that ensures organizations limit the collection and use of personal data to what is strictly necessary for a given purpose.",
+                        "citation_link": "https://gdpr.eu/data-minimization/",
+                        "intended_audience": [
+                            "Developers",
+                            "Data protection officers",
+                            "Compliance teams"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "DM-2",
+                        "requirement_text": "Enable users to selectively share personal data through APIs.",
+                        "requirement_abstract": "Provide users with granular control over the data they share through APIs.",
+                        "requirement_details": "Allowing users to selectively share personal data enhances user privacy and control over their information, aligning with data minimization principles.",
+                        "citation_link": "https://www.iso.org/standard/73984.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Privacy professionals",
+                            "Data protection officers"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "Authentication_Authorization": {
+                    "MUST": {
+                        "requirement_id": "AA-1",
+                        "requirement_text": "Implement strong authentication and authorization mechanisms for all API endpoints.",
+                        "requirement_abstract": "Ensure that only authorized users can access and perform actions through APIs.",
+                        "requirement_details": "Strong authentication and authorization mechanisms, such as OAuth 2.0 or API keys, are essential to prevent unauthorized access and protect privacy-sensitive data.",
+                        "citation_link": "https://www.iso.org/standard/73984.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security engineers",
+                            "Compliance teams"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "AA-2",
+                        "requirement_text": "Implement role-based access control (RBAC) for API resources.",
+                        "requirement_abstract": "Use RBAC to control user access to specific API resources based on predefined roles.",
+                        "requirement_details": "RBAC helps organizations enforce the principle of least privilege, ensuring that users have access only to the resources necessary for their role.",
+                        "citation_link": "https://gdpr.eu/role-based-access-control/",
+                        "intended_audience": [
+                            "Developers",
+                            "Security engineers",
+                            "Compliance teams"
+                        ],
+                        "severity": "High"
+                    },
+                    "MAY": {
+                        "requirement_id": "AA-3",
+                        "requirement_text": "Consider implementing multi-factor authentication (MFA) for sensitive API operations.",
+                        "requirement_abstract": "Enhance security by requiring additional authentication factors for sensitive API actions.",
+                        "requirement_details": "MFA adds an extra layer of security by requiring users to provide multiple factors (e.g., password, SMS code, fingerprint) to access sensitive API functions.",
+                        "citation_link": "https://www.iso.org/standard/73984.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security engineers",
+                            "Compliance teams"
+                        ],
+                        "severity": "Medium"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "NIST CSF (Cyber Security Framework)",
+        "data": {
+            "standard": "NIST Cyber Security Framework (CSF)",
+            "version": "1.1",
+            "primary_url": "https://www.nist.gov/cyberframework",
+            "scope": [
+                "All Industries",
+                "Security Teams",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "Identity_and_Access_Management": {
+                    "MUST": {
+                        "requirement_id": "IAM-1",
+                        "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                        "requirement_abstract": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys.",
+                        "requirement_details": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authentication",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "IAM-2",
+                        "requirement_text": "Utilize multi-factor authentication for sensitive APIs.",
+                        "requirement_abstract": "Sensitive APIs should require multi-factor authentication to enhance security.",
+                        "requirement_details": "Sensitive APIs should require multi-factor authentication to enhance security. Multi-factor authentication adds an extra layer of security by requiring users to provide multiple forms of verification.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-63/3/archive/2017-03-27",
+                        "intended_audience": [
+                            "Developers",
+                            "Identity Providers"
+                        ],
+                        "severity": "High"
+                    },
+                    "MAY": {
+                        "requirement_id": "IAM-3",
+                        "requirement_text": "Implement role-based access control (RBAC) for API authorization.",
+                        "requirement_abstract": "Consider using RBAC to manage access to APIs based on user roles and permissions.",
+                        "requirement_details": "Consider using RBAC to manage access to APIs based on user roles and permissions. RBAC allows organizations to restrict access based on the roles assigned to individual users.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Architects"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "Data_Protection": {
+                    "MUST": {
+                        "requirement_id": "DP-1",
+                        "requirement_text": "Encrypt sensitive data transmitted through APIs.",
+                        "requirement_abstract": "Sensitive data transmitted through APIs must be encrypted in transit.",
+                        "requirement_details": "Sensitive data transmitted through APIs must be encrypted in transit to protect it from unauthorized access. Encryption ensures that data remains confidential during transmission.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-52/rev-2/final",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "DP-2",
+                        "requirement_text": "Implement data masking for sensitive responses from APIs.",
+                        "requirement_abstract": "Consider masking sensitive data in API responses to prevent exposure.",
+                        "requirement_details": "Consider masking sensitive data in API responses to prevent exposure of critical information. Data masking ensures that sensitive information is not inadvertently disclosed to unauthorized parties.",
+                        "citation_link": "https://www.nist.gov/publications/data-masking-techniques-and-methodologies",
+                        "intended_audience": [
+                            "Developers",
+                            "Data Privacy Officers"
+                        ],
+                        "severity": "High"
+                    },
+                    "MAY": {
+                        "requirement_id": "DP-3",
+                        "requirement_text": "Implement data loss prevention (DLP) controls for API interactions.",
+                        "requirement_abstract": "Organizations may consider using DLP mechanisms to prevent data leakage through APIs.",
+                        "requirement_details": "Organizations may consider using DLP mechanisms to prevent data leakage through APIs. DLP tools can help monitor and control data transfers, reducing the risk of sensitive data exposure.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-98/final",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "Compliance Officers"
+                        ],
+                        "severity": "Medium"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "NIST SP 800-40 (Enterprise Patch Management)",
+        "data": {
+            "standard": "NIST SP 800-40",
+            "version": "2013",
+            "primary_url": "https://csrc.nist.gov/publications/detail/sp/800-40/archive/2013-07-09",
+            "scope": [
+                "Developers",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": [
+                {
+                    "Patch_Management_API_Security": {
+                        "MUST": [
+                            {
+                                "requirement_id": "PATCH-1",
+                                "requirement_text": "APIs managing patch information MUST authenticate and authorize all access.",
+                                "requirement_abstract": "APIs that manage patch information must enforce authentication and authorization mechanisms to control access.",
+                                "requirement_details_markdown_formatted": "APIs managing patch information must implement strong authentication and authorization mechanisms to ensure that only authorized entities can access or modify patch data. This includes using techniques such as OAuth 2.0, API keys, or other secure mechanisms.",
+                                "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-40/archive/2013-07-09",
+                                "intended_audience": [
+                                    "Developers",
+                                    "Security Engineers"
+                                ],
+                                "severity": "Critical"
+                            },
+                            {
+                                "requirement_id": "PATCH-2",
+                                "requirement_text": "APIs handling patches MUST validate and sanitize input from all sources.",
+                                "requirement_abstract": "APIs involved in managing patches must validate and sanitize input data from all external and internal sources.",
+                                "requirement_details_markdown_formatted": "All input received by APIs handling patches must be validated and sanitized to mitigate common security vulnerabilities such as SQL injection, cross-site scripting (XSS), and other injection attacks.",
+                                "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-40/archive/2013-07-09",
+                                "intended_audience": [
+                                    "Developers",
+                                    "Security Engineers"
+                                ],
+                                "severity": "High"
+                            }
+                        ],
+                        "SHOULD": [
+                            {
+                                "requirement_id": "PATCH-3",
+                                "requirement_text": "APIs related to patch management SHOULD use secure communication protocols.",
+                                "requirement_abstract": "APIs dealing with patch details should prefer secure communication channels to protect data in transit.",
+                                "requirement_details_markdown_formatted": "APIs associated with patch management should utilize secure communication protocols such as HTTPS to ensure that data transmitted between clients and servers remains confidential and integrity protected.",
+                                "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-40/archive/2013-07-09",
+                                "intended_audience": [
+                                    "Developers",
+                                    "Security Engineers"
+                                ],
+                                "severity": "Medium"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "NIST SP 800-34 (Contingency Planning Guide for Federal Information Systems)",
+        "data": {
+            "standard": "NIST SP 800-34",
+            "version": "2002",
+            "primary_url": "https://csrc.nist.gov/publications/detail/sp/800-34/final",
+            "scope": [
+                "Federal Information Systems",
+                "Contingency Planners",
+                "API Developers",
+                "Security Engineers"
+            ],
+            "requirements": {
+                "Contingency_Planning_Framework": {
+                    "MUST": {
+                        "requirement_id": "CP-1",
+                        "requirement_text": "Include API security considerations in the contingency planning framework.",
+                        "requirement_abstract": "The contingency planning framework must explicitly address API security aspects to ensure the resilience of the information system.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-34/final",
+                        "intended_audience": [
+                            "Contingency Planners",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    }
+                },
+                "API_Access_Controls": {
+                    "MUST": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "Implement strong access controls for APIs.",
+                        "requirement_abstract": "APIs must have robust access control mechanisms to restrict unauthorized access.",
+                        "requirement_details_markdown_formatted": "APIs must use robust access control mechanisms such as API keys, OAuth 2.0 scopes, and role-based access control (RBAC). API keys are unique identifiers used to authenticate requests to an API. OAuth 2.0 defines scopes to limit access rights for specific resources. RBAC enforces the principle of least privilege.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-34/final",
+                        "intended_audience": [
+                            "API Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    }
+                },
+                "Incident_Response_Plans": {
+                    "SHOULD": {
+                        "requirement_id": "IR-1",
+                        "requirement_text": "Include API-related incidents in the organization's incident response plans.",
+                        "requirement_abstract": "Organizations should have specific procedures to address incidents involving APIs.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-34/final",
+                        "intended_audience": [
+                            "Incident Response Teams",
+                            "Security Engineers"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "Security_Monitoring": {
+                    "SHOULD": {
+                        "requirement_id": "SM-1",
+                        "requirement_text": "Implement continuous security monitoring for APIs.",
+                        "requirement_abstract": "Continuous monitoring of APIs is recommended to detect and respond to security events in real-time.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-34/final",
+                        "intended_audience": [
+                            "Security Operations Centers",
+                            "Security Engineers"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "Data_Backup_and_Recovery": {
+                    "MAY": {
+                        "requirement_id": "DBR-1",
+                        "requirement_text": "Include APIs in data backup and recovery procedures.",
+                        "requirement_abstract": "Organizations may choose to include APIs in their data backup and recovery processes to ensure continuity of API services.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-34/final",
+                        "intended_audience": [
+                            "Backup Administrators",
+                            "API Developers"
+                        ],
+                        "severity": "Medium"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "NIST SP 800-41 (Guidelines of Firewalls and Firewall Policy)",
+        "data": {
+            "standard": "NIST SP 800-41",
+            "version": "2015",
+            "primary_url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-41r1.pdf",
+            "scope": [
+                "System Administrators",
+                "Security Engineers",
+                "Network Architects"
+            ],
+            "requirements": [
+                {
+                    "Firewall_Policy": {
+                        "SHOULD": {
+                            "requirement_id": "FP-1",
+                            "requirement_text": "Firewalls SHOULD be deployed at all network perimeters and between subnets.",
+                            "requirement_abstract": "Firewalls should be strategically placed in network architecture to provide a strong security barrier between internal and external networks as well as between different internal subnets.",
+                            "requirement_details": "Firewalls play a crucial role in enforcing network security policies, controlling traffic flow, and protecting sensitive resources from unauthorized access. It is recommended to deploy firewalls at all network perimeters and between network subnets to secure the network environment effectively.",
+                            "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-41r1.pdf#Firewall_Policy",
+                            "intended_audience": [
+                                "System Administrators",
+                                "Network Architects"
+                            ],
+                            "severity": "Medium"
+                        },
+                        "MUST": {
+                            "requirement_id": "FP-2",
+                            "requirement_text": "Firewall policies MUST be reviewed and updated regularly.",
+                            "requirement_abstract": "Regular review and updates of firewall policies are critical to ensure that the security posture of the network remains strong and adaptive to evolving threats.",
+                            "requirement_details": "Firewall policies should be regularly reviewed to align with the organization's security requirements, business needs, and threat landscape. Regular updates should be performed to address emerging threats, vulnerabilities, and changes in network infrastructure.",
+                            "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-41r1.pdf#Firewall_Policy",
+                            "intended_audience": [
+                                "Security Engineers",
+                                "Compliance Officers"
+                            ],
+                            "severity": "High"
+                        },
+                        "MAY": {
+                            "requirement_id": "FP-3",
+                            "requirement_text": "Firewalls MAY integrate with threat intelligence feeds for enhanced security.",
+                            "requirement_abstract": "Integration with threat intelligence feeds can provide real-time threat detection and response capabilities to firewalls.",
+                            "requirement_details": "Firewalls may integrate with threat intelligence feeds to leverage up-to-date threat information for proactive security measures. This integration can enhance the firewall's ability to detect and block malicious traffic based on known threat indicators.",
+                            "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-41r1.pdf#Firewall_Policy",
+                            "intended_audience": [
+                                "Security Engineers",
+                                "Threat Intelligence Analysts"
+                            ],
+                            "severity": "Low"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "NIST SP 800-92 (Guide to Computer Security Log Management)",
+        "data": {
+            "standard": "NIST SP 800-92",
+            "version": "2012",
+            "primary_url": "https://csrc.nist.gov/publications/detail/sp/800-92/archive/2012-06-22",
+            "scope": [
+                "IT Security Professionals",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "API_Log_Security": {
+                    "MUST": {
+                        "requirement_id": "API-LOG-1",
+                        "requirement_text": "API logs must be secured to prevent unauthorized access and tampering.",
+                        "requirement_abstract": "API logs contain sensitive information and must be protected against unauthorized access or tampering to ensure integrity and confidentiality.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-92/archive/2012-06-22",
+                        "intended_audience": [
+                            "IT Security Professionals",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "API-LOG-3",
+                        "requirement_text": "API logs should include relevant security events and activities.",
+                        "requirement_abstract": "Include relevant security-related information in API logs to enable effective monitoring and incident response.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-92/archive/2012-06-22",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "Compliance Officers"
+                        ],
+                        "severity": "Medium"
+                    },
+                    "MAY": {
+                        "requirement_id": "API-LOG-4",
+                        "requirement_text": "API logs may integrate with centralized SIEM systems for centralized monitoring and analysis.",
+                        "requirement_abstract": "Integrating API logs with a centralized SIEM system can enhance visibility and enable correlation of security events.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-92/archive/2012-06-22",
+                        "intended_audience": [
+                            "Security Operations",
+                            "Incident Response Teams"
+                        ],
+                        "severity": "Low"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "NIST SP 800-53 (Security and Privacy Controls)",
+        "data": {
+            "standard": "NIST SP 800-53",
+            "version": "Revision 5",
+            "primary_url": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
+            "scope": [
+                "Government Agencies",
+                "Federal Contractors",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "API_Security": {
+                    "MUST": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "Data transmitted over APIs MUST be encrypted in transit using industry-standard protocols.",
+                        "requirement_abstract": "APIs MUST protect data while in transit to prevent eavesdropping and unauthorized access.",
+                        "requirement_details": "APIs MUST use TLS 1.2 or higher with secure cipher suites to encrypt data transmitted over the network. Implement secure transport layer security configurations to protect sensitive data.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ]
+                    },
+                    "SHOULD": {
+                        "requirement_id": "API-4",
+                        "requirement_text": "API endpoints SHOULD be properly documented and versioned.",
+                        "requirement_abstract": "API documentation and versioning help developers understand and use APIs effectively.",
+                        "requirement_details": "Maintain clear and up-to-date documentation for all API endpoints, parameters, response formats, and error codes. Use versioning to manage changes and deprecations in a backward-compatible manner.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
+                        "intended_audience": [
+                            "Developers",
+                            "API Product Managers"
+                        ]
+                    },
+                    "MAY": {
+                        "requirement_id": "API-5",
+                        "requirement_text": "APIs MAY implement additional security controls based on specific risk assessments.",
+                        "requirement_abstract": "Organizations MAY choose to implement additional security measures based on the sensitivity of API data and threats faced.",
+                        "requirement_details": "Conduct risk assessments and threat modeling to identify additional security controls needed for specific APIs. Consider factors such as data sensitivity, regulatory requirements, and potential attack vectors when determining additional safeguards.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "Compliance Officers"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "NIST SP 800-128: Guide for Security-Focused Configuration Management of Information Systems",
+        "data": {
+            "standard": "NIST SP 800-128: Guide for Security-Focused Configuration Management of Information Systems",
+            "version": "2020",
+            "primary_url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-128.pdf",
+            "scope": [
+                "Developers",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "Security_Focused_Configuration": {
+                    "MUST": [
+                        {
+                            "requirement_id": "CFG-1",
+                            "requirement_text": "API configurations MUST be securely managed and controlled.",
+                            "requirement_abstract": "API configurations must be maintained securely to prevent unauthorized access or modifications.",
+                            "requirement_details": "API configurations should follow the principle of least privilege and should be regularly reviewed and updated.",
+                            "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-128.pdf",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "High"
+                        },
+                        {
+                            "requirement_id": "CFG-2",
+                            "requirement_text": "API keys and secrets MUST be securely stored and managed.",
+                            "requirement_abstract": "API keys and secrets must be stored in a secure manner to prevent unauthorized access.",
+                            "requirement_details": "API keys and secrets should not be hard-coded in source code and should be rotated regularly.",
+                            "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-128.pdf",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "High"
+                        }
+                    ],
+                    "SHOULD": [
+                        {
+                            "requirement_id": "CFG-3",
+                            "requirement_text": "API endpoints SHOULD be protected with strong authentication mechanisms.",
+                            "requirement_abstract": "API endpoints should require authentication to access sensitive data or perform critical functions.",
+                            "requirement_details": "API endpoints can use OAuth 2.0, API keys, or other strong authentication mechanisms to verify the identity of clients.",
+                            "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-128.pdf",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "standard": "NIST SP 800-94 (Guide to Intrusion Detection and Preventions Systems (IDPS))",
+        "data": {
+            "standard": "NIST SP 800-94",
+            "version": "Guide to Intrusion Detection and Prevention Systems (IDPS)",
+            "primary_url": "https://csrc.nist.gov/publications/detail/sp/800-94/final",
+            "scope": [
+                "Security Engineers",
+                "IDPS Administrators",
+                "Compliance Officers"
+            ],
+            "requirements": [
+                {
+                    "API_Security": {
+                        "MUST": [
+                            {
+                                "requirement_id": "API-1",
+                                "requirement_text": "Implement API security controls to protect against common threats.",
+                                "requirement_abstract": "APIs must have security controls implemented to prevent common attacks such as SQL injection, cross-site scripting (XSS), and improper authentication.",
+                                "requirement_details_markdown_formatted": "API security controls should include input validation, output encoding, proper authentication and authorization mechanisms, and protection against common vulnerabilities such as SQL injection and XSS. Security should be implemented at all layers of the API communication.",
+                                "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-94/final",
+                                "intended_audience": [
+                                    "Security Engineers",
+                                    "Developers"
+                                ],
+                                "severity": "High"
+                            }
+                        ],
+                        "SHOULD": [
+                            {
+                                "requirement_id": "API-2",
+                                "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                                "requirement_abstract": "APIs should use strong authentication mechanisms such as OAuth 2.0 or API keys to verify the identity of the caller.",
+                                "requirement_details_markdown_formatted": "APIs should use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                                "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-94/final",
+                                "intended_audience": [
+                                    "Developers",
+                                    "IDPS Administrators"
+                                ],
+                                "severity": "High"
+                            },
+                            {
+                                "requirement_id": "API-3",
+                                "requirement_text": "Implement encryption for sensitive data transmitted via APIs.",
+                                "requirement_abstract": "Sensitive data transmitted through APIs should be encrypted using industry-standard cryptographic protocols.",
+                                "requirement_details_markdown_formatted": "Sensitive data transmitted through APIs should be encrypted using industry-standard cryptographic protocols such as TLS. This helps protect data from eavesdropping and ensures confidentiality and integrity.",
+                                "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-94/final",
+                                "intended_audience": [
+                                    "Developers",
+                                    "Security Engineers"
+                                ],
+                                "severity": "High"
+                            }
+                        ],
+                        "MAY": [
+                            {
+                                "requirement_id": "API-4",
+                                "requirement_text": "Implement rate limiting and throttling mechanisms to protect APIs from abuse.",
+                                "requirement_abstract": "Rate limiting and throttling mechanisms may be implemented to control the number of requests an API consumer can make within a specific timeframe.",
+                                "requirement_details_markdown_formatted": "Rate limiting and throttling mechanisms can help prevent abuse and protect API resources from being overwhelmed by excessive requests. These mechanisms can be used to limit the number of requests per second or per minute from a single consumer.",
+                                "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-94/final",
+                                "intended_audience": [
+                                    "Developers",
+                                    "IDPS Administrators"
+                                ],
+                                "severity": "Medium"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "NIST SP 800-137 (ISCM for Federal Information Systems and Organizations)",
+        "data": {
+            "standard": "NIST SP 800-137",
+            "version": "2011",
+            "primary_url": "https://csrc.nist.gov/publications/detail/sp/800-137/final",
+            "scope": [
+                "Federal Information Systems, Organizations, API Developers, Security Engineers"
+            ],
+            "requirements": {
+                "API_Authentication": {
+                    "MUST": {
+                        "requirement_id": "API-1",
+                        "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                        "requirement_abstract": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys.",
+                        "requirement_details_raw_text": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-137/final",
+                        "intended_audience": [
+                            "Developers",
+                            "Architects",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    }
+                },
+                "API_Authorization": {
+                    "MUST": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "Enforce proper authorization controls for API access.",
+                        "requirement_abstract": "All API access must be properly authorized based on the principle of least privilege.",
+                        "requirement_details_raw_text": "All API access must be properly authorized based on the principle of least privilege. Each API endpoint should enforce access controls to ensure that only authorized entities can invoke specific functionalities.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-137/final",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    }
+                },
+                "API_Data_Protection": {
+                    "SHOULD": {
+                        "requirement_id": "API-3",
+                        "requirement_text": "Encrypt sensitive data transmitted over APIs.",
+                        "requirement_abstract": "Sensitive data transmitted over APIs should be encrypted using industry-standard protocols.",
+                        "requirement_details_raw_text": "Sensitive data transmitted over APIs should be encrypted using industry-standard protocols to protect confidentiality and integrity. TLS should be used to establish secure communication channels.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-137/final",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "API_Logging": {
+                    "SHOULD": {
+                        "requirement_id": "API-4",
+                        "requirement_text": "Implement comprehensive logging for all API activities.",
+                        "requirement_abstract": "API activities should be logged with sufficient details for monitoring and forensic analysis.",
+                        "requirement_details_raw_text": "API activities should be logged with sufficient details for monitoring and forensic analysis. Log entries should include relevant information such as source IP addresses, timestamps, request parameters, and response codes.",
+                        "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-137/final",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "Auditors"
+                        ],
+                        "severity": "High"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "NIST SP 800-150 (Guide to Cyber Threat Intelligence Sharing)",
+        "data": {
+            "standard": "NIST SP 800-150",
+            "version": "2020",
+            "primary_url": "https://csrc.nist.gov/publications/detail/sp/800-150/final",
+            "scope": [
+                "Cyber Threat Intelligence Sharing Organizations",
+                "Developers",
+                "Security Engineers"
+            ],
+            "requirements": {
+                "API_Security": {
+                    "MUST": [
+                        {
+                            "requirement_id": "API-1",
+                            "requirement_text": "APIs communicating threat intelligence data MUST use secure communication protocols such as HTTPS.",
+                            "requirement_abstract": "APIs exchanging threat intelligence information must ensure data confidentiality and integrity by using secure transport mechanisms like HTTPS.",
+                            "requirement_details": {
+                                "ciphers": "TLS 1.2 or higher, with strong cipher suites (e.g., AES-GCM)",
+                                "certificate_validation": "Mutual TLS (mTLS) authentication for client and server verification"
+                            },
+                            "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-150/final",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "High"
+                        },
+                        {
+                            "requirement_id": "API-2",
+                            "requirement_text": "APIs MUST implement access controls to restrict unauthorized access to threat intelligence data.",
+                            "requirement_abstract": "Access controls must be enforced within APIs to prevent unauthorized users from accessing sensitive threat intelligence data.",
+                            "requirement_details": {
+                                "authorization": "Role-based access control (RBAC) or attribute-based access control (ABAC)",
+                                "API_endpoints": "Authenticated and authorized endpoints for different user roles"
+                            },
+                            "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-150/final",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Critical"
+                        }
+                    ],
+                    "SHOULD": [
+                        {
+                            "requirement_id": "API-3",
+                            "requirement_text": "APIs SHOULD enable rate limiting and throttle requests to prevent abuse and DoS attacks.",
+                            "requirement_abstract": "Implementing rate limiting helps protect APIs from abuse and malicious DoS attacks by limiting the number of requests per time unit.",
+                            "requirement_details": {
+                                "rate_limiting": "Configurable rate limits based on user roles or API usage"
+                            },
+                            "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-150/final",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    ],
+                    "MAY": [
+                        {
+                            "requirement_id": "API-4",
+                            "requirement_text": "APIs MAY implement token-based authentication for secure access control.",
+                            "requirement_abstract": "Token-based authentication mechanisms like JWT or OAuth can enhance API security by providing secure access control.",
+                            "requirement_details": {
+                                "token_types": "JWT, OAuth 2.0",
+                                "token_validation": "Signature validation and expiration checks"
+                            },
+                            "citation_link": "https://csrc.nist.gov/publications/detail/sp/800-150/final",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Low"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "standard": "RFC 5424 (The Syslog Protocol)",
+        "data": {
+            "standard": "RFC 5424 - The Syslog Protocol",
+            "version": "2009",
+            "primary_url": "https://tools.ietf.org/html/rfc5424",
+            "scope": [
+                "Developers",
+                "Syslog Administrators",
+                "Security Engineers"
+            ],
+            "requirements": [
+                {
+                    "Message_Format": {
+                        "MUST": {
+                            "requirement_id": "MSG-1",
+                            "requirement_text": "Messages MUST be structured in accordance with the syslog message format specified in RFC 5424.",
+                            "requirement_abstract": "Ensure that messages adhere to the defined structure for syslog messages.",
+                            "citation_link": "https://tools.ietf.org/html/rfc5424#section-6"
+                        }
+                    },
+                    "Transport_Security": {
+                        "MUST": {
+                            "requirement_id": "TRANSPORT-1",
+                            "requirement_text": "Transport of syslog messages MUST be encrypted using TLS.",
+                            "requirement_abstract": "Utilize TLS encryption for secure transport of syslog messages.",
+                            "citation_link": "https://tools.ietf.org/html/rfc5425",
+                            "intended_audience": [
+                                "Developers",
+                                "Syslog Administrators"
+                            ]
+                        },
+                        "SHOULD": {
+                            "requirement_id": "TRANSPORT-2",
+                            "requirement_text": "Implement syslog message signing to ensure data integrity and origin authentication.",
+                            "requirement_abstract": "Consider implementing message signing to verify data integrity and source authenticity.",
+                            "citation_link": "https://tools.ietf.org/html/rfc5425#section-4.2"
+                        }
+                    },
+                    "Content_Security": {
+                        "SHOULD": {
+                            "requirement_id": "CONTENT-1",
+                            "requirement_text": "Apply access controls to restrict who can read and write syslog messages.",
+                            "requirement_abstract": "Implement controls to manage access to syslog message content.",
+                            "citation_link": "https://tools.ietf.org/html/rfc5424#section-6.2.3"
+                        },
+                        "MAY": {
+                            "requirement_id": "CONTENT-2",
+                            "requirement_text": "Consider using structured data elements to enhance syslog message content with additional context.",
+                            "requirement_abstract": "Explore the usage of structured data to augment syslog message details.",
+                            "citation_link": "https://tools.ietf.org/html/rfc5424#section-6.5"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "RFC 6811 (BGP Prefix Origin Validation)",
+        "data": {
+            "standard": "RFC 6811 - BGP Prefix Origin Validation",
+            "version": "2010",
+            "primary_url": "https://datatracker.ietf.org/doc/rfc6811/",
+            "scope": [
+                "Network Engineers",
+                "Security Engineers"
+            ],
+            "requirements": [
+                {
+                    "General_Requirements": {
+                        "MUST": [
+                            {
+                                "requirement_id": "GEN-1",
+                                "requirement_text": "Implement BGP Prefix Origin Validation to prevent prefix hijacking.",
+                                "requirement_abstract": "BGP Prefix Origin Validation helps in preventing the propagation of illegitimately originated BGP routes.",
+                                "citation_link": "https://datatracker.ietf.org/doc/rfc6811/",
+                                "intended_audience": [
+                                    "Network Engineers",
+                                    "Security Engineers"
+                                ],
+                                "severity": "Critical"
+                            },
+                            {
+                                "requirement_id": "GEN-2",
+                                "requirement_text": "Utilize RPKI to cryptographically validate the origin AS for BGP route announcements.",
+                                "requirement_abstract": "RPKI provides a way to cryptographically sign BGP route announcements, ensuring the validity of the origin AS.",
+                                "citation_link": "https://datatracker.ietf.org/doc/rfc6811/",
+                                "intended_audience": [
+                                    "Network Engineers",
+                                    "Security Engineers"
+                                ],
+                                "severity": "Critical"
+                            }
+                        ],
+                        "SHOULD": [
+                            {
+                                "requirement_id": "GEN-3",
+                                "requirement_text": "Configure strict filtering policies for route announcements.",
+                                "requirement_abstract": "Implement strict prefix filters to control the advertisement of BGP routes.",
+                                "citation_link": "https://datatracker.ietf.org/doc/rfc6811/",
+                                "intended_audience": [
+                                    "Network Engineers"
+                                ],
+                                "severity": "High"
+                            }
+                        ]
+                    },
+                    "Validation_Methods": {
+                        "MAY": [
+                            {
+                                "requirement_id": "VAL-1",
+                                "requirement_text": "Consider implementing BGP flow-spec for fine-grained traffic filtering based on BGP attributes.",
+                                "requirement_abstract": "BGP flow-spec allows for the definition of traffic filtering rules based on BGP attributes.",
+                                "citation_link": "https://datatracker.ietf.org/doc/rfc6811/",
+                                "intended_audience": [
+                                    "Network Engineers",
+                                    "Security Engineers"
+                                ],
+                                "severity": "Medium"
+                            }
+                        ]
+                    },
+                    "Monitoring": {
+                        "SHOULD": [
+                            {
+                                "requirement_id": "MON-1",
+                                "requirement_text": "Establish a monitoring system to detect and alert on route hijacks.",
+                                "requirement_abstract": "Set up a monitoring system to identify potential BGP prefix hijacks in real-time.",
+                                "citation_link": "https://datatracker.ietf.org/doc/rfc6811/",
+                                "intended_audience": [
+                                    "Network Engineers",
+                                    "Security Engineers"
+                                ],
+                                "severity": "High"
+                            }
+                        ],
+                        "MAY": [
+                            {
+                                "requirement_id": "MON-2",
+                                "requirement_text": "Consider using BGP monitoring tools for anomalous BGP behavior detection.",
+                                "requirement_abstract": "Leverage BGP monitoring tools to uncover any suspicious BGP activity.",
+                                "citation_link": "https://datatracker.ietf.org/doc/rfc6811/",
+                                "intended_audience": [
+                                    "Network Engineers",
+                                    "Security Engineers"
+                                ],
+                                "severity": "Medium"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "RFC 6749 (OAuth 2.0 Authorization Framework)",
+        "data": {
+            "standard": "RFC 6749 (OAuth 2.0 Authorization Framework)",
+            "version": "2012",
+            "primary_url": "https://tools.ietf.org/html/rfc6749",
+            "scope": [
+                "API Developers",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": [
+                {
+                    "Authorization_Request_Flow": {
+                        "MUST": {
+                            "requirement_id": "ARF-1",
+                            "requirement_text": "Client MUST use the authorization code grant flow when possible to obtain access tokens.",
+                            "requirement_abstract": "Clients should use the authorization code grant flow to enhance security and reduce risks associated with storing sensitive information.",
+                            "requirement_details": {
+                                "Authorization_Code_Grant_Flow": {
+                                    "client_id": "client_id_value",
+                                    "redirect_uri": "redirect_uri_value",
+                                    "response_type": "code",
+                                    "scope": "scope_value",
+                                    "state": "state_value"
+                                }
+                            },
+                            "citation_link": "https://tools.ietf.org/html/rfc6749#section-4.1",
+                            "intended_audience": [
+                                "API Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "High"
+                        },
+                        "SHOULD": {
+                            "requirement_id": "ARF-2",
+                            "requirement_text": "Client SHOULD utilize PKCE (Proof Key for Code Exchange) with the authorization code grant flow to prevent authorization code interception.",
+                            "requirement_abstract": "PKCE adds an extra layer of security to the authorization code grant flow by mitigating the risks of interception attacks.",
+                            "requirement_details": {
+                                "PKCE": {
+                                    "code_verifier": "code_verifier_value",
+                                    "code_challenge": "code_challenge_value",
+                                    "code_challenge_method": "S256"
+                                }
+                            },
+                            "citation_link": "https://tools.ietf.org/html/rfc6749#section-4.1",
+                            "intended_audience": [
+                                "API Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Medium"
+                        },
+                        "MAY": {
+                            "requirement_id": "ARF-3",
+                            "requirement_text": "Client MAY use the implicit grant flow for public clients with no client secret.",
+                            "requirement_abstract": "Implicit grant flow is suitable for public clients and browser-based applications when handling authentication without client secrets.",
+                            "requirement_details": {
+                                "Implicit_Grant_Flow": {
+                                    "response_type": "token",
+                                    "client_id": "client_id_value",
+                                    "redirect_uri": "redirect_uri_value"
+                                }
+                            },
+                            "citation_link": "https://tools.ietf.org/html/rfc6749#section-4.2",
+                            "intended_audience": [
+                                "API Developers"
+                            ],
+                            "severity": "Low"
+                        },
+                        "citation_link": "https://tools.ietf.org/html/rfc6749#section-4",
+                        "intended_audience": [
+                            "API Developers",
+                            "Security Engineers",
+                            "Compliance Officers"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "RFC 7525 (Recommendations for TLS and DTLS)",
+        "data": {
+            "standard": "RFC 7525 (Recommendations for TLS and DTLS)",
+            "version": "2018",
+            "primary_url": "https://www.rfc-editor.org/rfc/rfc7525.html",
+            "scope": [
+                "Developers",
+                "Security Engineers",
+                "API Architects"
+            ],
+            "requirements": {
+                "Transport Layer Security (TLS) Configuration": {
+                    "MUST": {
+                        "requirement_id": "TLS-1",
+                        "requirement_text": "Implement secure TLS configurations for APIs.",
+                        "requirement_abstract": "APIs must use TLS protocols that meet current security standards to protect data during transmission.",
+                        "requirement_details": {
+                            "cipher_suites": "Use strong cipher suites like AES-GCM or ChaCha20-Poly1305.",
+                            "certificate_verification": "Implement proper certificate validation mechanisms.",
+                            "secure_parameters": "Ensure secure TLS parameters including version, ciphers, and key exchange methods."
+                        },
+                        "citation_link": "https://www.rfc-editor.org/rfc/rfc7525.html#section-4",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "High"
+                    }
+                },
+                "Public Key Infrastructure (PKI)": {
+                    "SHOULD": {
+                        "requirement_id": "PKI-1",
+                        "requirement_text": "Leverage a trustworthy PKI for managing certificates.",
+                        "requirement_abstract": "APIs should use a reliable PKI infrastructure for certificate issuance and revocation.",
+                        "requirement_details": {
+                            "certificate_authorities": "Use well-known and trusted certificate authorities for certificate management.",
+                            "certificate_revocation": "Implement certificate revocation mechanisms effectively."
+                        },
+                        "citation_link": "https://www.rfc-editor.org/rfc/rfc7525.html#section-3",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "API Architects"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "TLS Version Support": {
+                    "MAY": {
+                        "requirement_id": "TLS-2",
+                        "requirement_text": "Support the latest TLS versions on API servers.",
+                        "requirement_abstract": "API servers may support the most current versions of TLS to benefit from the latest security enhancements.",
+                        "requirement_details": {
+                            "protocol_versions": "Maintain support for TLS 1.3 while also considering backward compatibility.",
+                            "deployment_considerations": "Securely deploy new TLS versions to avoid potential compatibility issues with older clients."
+                        },
+                        "citation_link": "https://www.rfc-editor.org/rfc/rfc7525.html#section-2",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Low"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "RFC 8725 (JWT Best Current Practices)",
+        "data": {
+            "standard": "RFC 8725 - JWT Best Current Practices",
+            "version": "2019",
+            "primary_url": "https://www.rfc-editor.org/rfc/rfc8725.html",
+            "scope": [
+                "Developers",
+                "Security Engineers",
+                "API Architects"
+            ],
+            "requirements": [
+                {
+                    "JWT_Signing": {
+                        "MUST": {
+                            "requirement_id": "JWT-1",
+                            "requirement_text": "JWTs MUST be signed with strong digital signatures.",
+                            "requirement_abstract": "JWTs must be signed using strong digital signatures to ensure authenticity and integrity of the token. Weak or insecure signature algorithms should not be used.",
+                            "citation_link": "https://www.rfc-editor.org/rfc/rfc8725.html#section-4",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Critical"
+                        },
+                        "SHOULD": {
+                            "requirement_id": "JWT-2",
+                            "requirement_text": "JWTs SHOULD use asymmetric key pairs for signing.",
+                            "requirement_abstract": "JWTs should use asymmetric key pairs for signing to enhance security and prevent compromise of the key.",
+                            "citation_link": "https://www.rfc-editor.org/rfc/rfc8725.html#section-4",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "High"
+                        }
+                    }
+                },
+                {
+                    "JWT_Encryption": {
+                        "SHOULD": {
+                            "requirement_id": "JWT-3",
+                            "requirement_text": "JWTs SHOULD be encrypted when sensitive data is included in the payload.",
+                            "requirement_abstract": "JWTs should be encrypted using strong encryption algorithms when sensitive data is included in the payload to protect the confidentiality of the information.",
+                            "citation_link": "https://www.rfc-editor.org/rfc/rfc8725.html#section-5",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "High"
+                        }
+                    }
+                },
+                {
+                    "JWT_Expiration": {
+                        "MUST": {
+                            "requirement_id": "JWT-4",
+                            "requirement_text": "JWTs MUST include an expiration time to limit their validity period.",
+                            "requirement_abstract": "JWTs must include an expiration time to limit the period of validity, reducing the risk of unauthorized access to protected resources.",
+                            "citation_link": "https://www.rfc-editor.org/rfc/rfc8725.html#section-6",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Medium"
+                        }
+                    }
+                },
+                {
+                    "JWT_Audience": {
+                        "SHOULD": {
+                            "requirement_id": "JWT-5",
+                            "requirement_text": "JWTs SHOULD include an 'aud' claim to specify the intended audience of the token.",
+                            "requirement_abstract": "JWTs should include an 'aud' claim to specify the intended audience of the token, helping to prevent misuse or unauthorized use of the token.",
+                            "citation_link": "https://www.rfc-editor.org/rfc/rfc8725.html#section-7",
+                            "intended_audience": [
+                                "Developers",
+                                "Security Engineers"
+                            ],
+                            "severity": "Low"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "NIST SP 800-61 (Computer Security Incident Handling Guide)",
+        "data": {
+            "standard": "NIST SP 800-61 - Computer Security Incident Handling Guide",
+            "version": "Rev. 2",
+            "primary_url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+            "scope": [
+                "Security Engineers",
+                "Incident Handlers",
+                "Administrators"
+            ],
+            "requirements": [
+                {
+                    "Preparation": {
+                        "MUST": [
+                            {
+                                "requirement_id": "API-1",
+                                "requirement_text": "Establish an incident response policy and process specifically for APIs.",
+                                "requirement_abstract": "Organizations MUST have a documented incident response policy and process that specifically addresses incidents involving APIs.",
+                                "requirement_details": "The policy and process should cover how incidents involving APIs will be detected, reported, assessed, responded to, and communicated. It should also include procedures for coordinating responses with relevant stakeholders.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Security Engineers",
+                                    "Incident Handlers"
+                                ],
+                                "severity": "Critical"
+                            },
+                            {
+                                "requirement_id": "API-2",
+                                "requirement_text": "Perform regular API security assessments and audits.",
+                                "requirement_abstract": "Organizations MUST conduct regular security assessments and audits of APIs to identify vulnerabilities and ensure compliance with security standards.",
+                                "requirement_details": "This should include testing the authentication and authorization mechanisms, data encryption, input validation, error handling, and other security controls in place for APIs.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Security Engineers",
+                                    "Developers"
+                                ],
+                                "severity": "High"
+                            }
+                        ],
+                        "SHOULD": [
+                            {
+                                "requirement_id": "API-3",
+                                "requirement_text": "Establish incident response playbooks specifically for API security incidents.",
+                                "requirement_abstract": "Organizations SHOULD develop incident response playbooks tailored to API security incidents to ensure a structured and efficient response.",
+                                "requirement_details": "These playbooks should outline specific steps to be taken in the event of an API security incident, including containment, eradication, recovery, and lessons learned.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Incident Handlers",
+                                    "Administrators"
+                                ],
+                                "severity": "Medium"
+                            }
+                        ],
+                        "MAY": [
+                            {
+                                "requirement_id": "API-4",
+                                "requirement_text": "Implement API abuse detection mechanisms.",
+                                "requirement_abstract": "Organizations MAY deploy mechanisms to detect and mitigate API abuse, such as rate limiting, anomaly detection, and behavior analysis.",
+                                "requirement_details": "API abuse detection mechanisms can help identify and respond to malicious activities targeting APIs, improving overall security posture.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Security Engineers",
+                                    "Developers"
+                                ],
+                                "severity": "Low"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Detection and Analysis": {
+                        "MUST": [
+                            {
+                                "requirement_id": "API-5",
+                                "requirement_text": "Implement API logging and monitoring.",
+                                "requirement_abstract": "Organizations MUST implement robust logging and monitoring for APIs to enable timely detection of security incidents.",
+                                "requirement_details": "Logging should include all API interactions, user activities, error messages, and potential security-related events. Monitoring should involve real-time alerting and analysis of logs for suspicious patterns.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Security Engineers",
+                                    "Administrators"
+                                ],
+                                "severity": "Critical"
+                            }
+                        ],
+                        "SHOULD": [
+                            {
+                                "requirement_id": "API-6",
+                                "requirement_text": "Establish baseline API behavior and define alerts for deviations.",
+                                "requirement_abstract": "Organizations SHOULD establish a baseline for normal API behavior and set up alerts for deviations from expected patterns.",
+                                "requirement_details": "Monitoring tools should be configured to detect anomalies in API traffic, usage patterns, and data transfers. Alerts should be triggered based on predefined thresholds and rules.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Security Engineers",
+                                    "Incident Handlers"
+                                ],
+                                "severity": "High"
+                            }
+                        ],
+                        "MAY": [
+                            {
+                                "requirement_id": "API-7",
+                                "requirement_text": "Utilize threat intelligence feeds for API security monitoring.",
+                                "requirement_abstract": "Organizations MAY integrate threat intelligence feeds into API security monitoring tools to enhance threat detection capabilities.",
+                                "requirement_details": "Threat intelligence feeds can provide up-to-date information on known threats, vulnerabilities, and attacker tactics, helping organizations proactively defend against malicious activities.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Security Engineers",
+                                    "Threat Intelligence Analysts"
+                                ],
+                                "severity": "Medium"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Containment, Eradication, and Recovery": {
+                        "MUST": [
+                            {
+                                "requirement_id": "API-8",
+                                "requirement_text": "Isolate compromised APIs to prevent further damage.",
+                                "requirement_abstract": "Organizations MUST isolate compromised APIs to contain the impact of security incidents and prevent further unauthorized access.",
+                                "requirement_details": "Isolation measures may include blocking access to compromised APIs, disabling affected services, or implementing network segmentation to limit the spread of the incident.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Incident Handlers",
+                                    "Administrators"
+                                ],
+                                "severity": "Critical"
+                            }
+                        ],
+                        "SHOULD": [
+                            {
+                                "requirement_id": "API-9",
+                                "requirement_text": "Develop rollback procedures for API changes made during incident response.",
+                                "requirement_abstract": "Organizations SHOULD establish rollback procedures to revert any API changes made during incident response activities, ensuring system stability and integrity.",
+                                "requirement_details": "Rollback procedures should be documented and tested in advance to minimize disruptions and avoid unintended consequences.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Incident Handlers",
+                                    "Developers"
+                                ],
+                                "severity": "High"
+                            }
+                        ],
+                        "MAY": [
+                            {
+                                "requirement_id": "API-10",
+                                "requirement_text": "Implement automated recovery mechanisms for API services.",
+                                "requirement_abstract": "Organizations MAY deploy automated recovery mechanisms to restore API services quickly after security incidents.",
+                                "requirement_details": "Automation can help reduce downtime and ensure timely restoration of API functionality, improving overall resilience and availability.",
+                                "citation_link": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+                                "intended_audience": [
+                                    "Administrators",
+                                    "Developers"
+                                ],
+                                "severity": "Low"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "standard": "OWASP Cheat Sheet Series",
+        "data": {
+            "standard": "OWASP Cheat Sheet Series - API Security",
+            "version": "2021",
+            "primary_url": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html",
+            "scope": [
+                "Developers",
+                "Security Engineers",
+                "API Architects"
+            ],
+            "requirements": {
+                "API_Authentication": {
+                    "MUST": {
+                        "requirement_id": "API-1",
+                        "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                        "requirement_abstract": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys.",
+                        "requirement_details": {
+                            "description": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                            "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html#authentication",
+                            "intended_audience": [
+                                "Developers",
+                                "API Architects",
+                                "Security Engineers"
+                            ],
+                            "severity": "Critical"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "RFC 9110 (HTTP Semantics)",
+        "data": {
+            "standard": "RFC 9110 - HTTP Semantics",
+            "version": "1.0",
+            "primary_url": "https://tools.ietf.org/html/rfc9110",
+            "scope": [
+                "API Developers",
+                "Security Engineers",
+                "HTTP protocol implementers"
+            ],
+            "requirements": {
+                "Authentication": {
+                    "MUST": {
+                        "requirement_id": "SEC-1",
+                        "requirement_text": "APIs must authenticate all requests.",
+                        "requirement_abstract": "All API requests must be authenticated to ensure secure access.",
+                        "requirement_details": "APIs should use strong authentication mechanisms such as OAuth 2.0 or API keys to verify the identity of clients making API requests.",
+                        "citation_link": "https://tools.ietf.org/html/rfc9110#section-5.1",
+                        "intended_audience": [
+                            "API Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "SEC-2",
+                        "requirement_text": "APIs should use OAuth 2.0 for authentication and authorization.",
+                        "requirement_abstract": "OAuth 2.0 provides a framework to secure API access by handling authentication and authorization.",
+                        "requirement_details": "OAuth 2.0 is recommended for its proven security features and wide adoption in the industry.",
+                        "citation_link": "https://tools.ietf.org/html/rfc9110#section-5.1.1",
+                        "intended_audience": [
+                            "API Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "High"
+                    },
+                    "MAY": {
+                        "requirement_id": "SEC-3",
+                        "requirement_text": "APIs may support API keys for authentication in addition to OAuth 2.0.",
+                        "requirement_abstract": "Allowing the use of API keys can provide a simpler authentication option for some clients.",
+                        "requirement_details": "API keys can be used as an alternative or supplementary authentication method alongside OAuth 2.0.",
+                        "citation_link": "https://tools.ietf.org/html/rfc9110#section-5.1.2",
+                        "intended_audience": [
+                            "API Developers"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "Authorization": {
+                    "MUST": {
+                        "requirement_id": "SEC-4",
+                        "requirement_text": "APIs must enforce proper authorization for all requests.",
+                        "requirement_abstract": "Implement access control mechanisms to ensure that only authorized clients can perform specific actions.",
+                        "requirement_details": "Define and enforce proper authorization rules based on the identity and rights of clients accessing the API.",
+                        "citation_link": "https://tools.ietf.org/html/rfc9110#section-5.2",
+                        "intended_audience": [
+                            "API Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "SEC-5",
+                        "requirement_text": "APIs should use OAuth 2.0 scopes for fine-grained access control.",
+                        "requirement_abstract": "Leverage OAuth 2.0 scopes to specify and limit the permissions granted to clients.",
+                        "requirement_details": "OAuth 2.0 scopes allow API providers to define specific permissions for different types of access.",
+                        "citation_link": "https://tools.ietf.org/html/rfc9110#section-5.2.1",
+                        "intended_audience": [
+                            "API Developers"
+                        ],
+                        "severity": "High"
+                    },
+                    "MAY": {
+                        "requirement_id": "SEC-6",
+                        "requirement_text": "APIs may support custom roles and permissions for authorization.",
+                        "requirement_abstract": "Allow defining custom roles and permissions to tailor access control to specific use cases.",
+                        "requirement_details": "Custom roles and permissions can provide flexibility in defining access levels for different resources and actions.",
+                        "citation_link": "https://tools.ietf.org/html/rfc9110#section-5.2.2",
+                        "intended_audience": [
+                            "API Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Medium"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "CSA CCM (Cloud Security Alliance - Cloud Controls Matrix)",
+        "data": null
+    },
+    {
+        "standard": "SANS Secure Software Development and Code Analysis Tools - Whitepaper",
+        "data": {
+            "standard": "SANS Secure Software Development and Code Analysis Tools - Whitepaper",
+            "version": "2021",
+            "primary_url": "https://www.sans.org/white-papers/4300/",
+            "scope": [
+                "Developers",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "API_Security": {
+                    "MUST": {
+                        "requirement_id": "API-1",
+                        "requirement_text": "Implement secure authentication mechanisms for all APIs",
+                        "requirement_abstract": "All APIs must implement secure authentication mechanisms to prevent unauthorized access.",
+                        "requirement_details": {
+                            "authentication_methods": [
+                                "OAuth 2.0",
+                                "API Keys"
+                            ],
+                            "additional_guidance": "Employ multi-factor authentication where possible to enhance security.",
+                            "cryptography_standards": [
+                                "TLS 1.2 or higher"
+                            ],
+                            "logging": "All authentication events should be logged for monitoring and auditing purposes."
+                        },
+                        "citation_link": "https://www.sans.org/",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "High"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "Implement authorization controls based on least privilege",
+                        "requirement_abstract": "APIs should enforce access controls based on the principle of least privilege.",
+                        "requirement_details": {
+                            "authorization_strategy": "Role-based access control (RBAC)",
+                            "authorization_rules": "Ensure that APIs only grant access to the resources necessary for each user role.",
+                            "error_handling": "Return specific error messages for unauthorized access attempts."
+                        },
+                        "citation_link": "https://www.sans.org/",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Medium"
+                    },
+                    "MAY": {
+                        "requirement_id": "API-3",
+                        "requirement_text": "Implement rate limiting and throttling mechanisms",
+                        "requirement_abstract": "Consider implementing rate limiting and throttling to protect APIs from abuse and DoS attacks.",
+                        "requirement_details": {
+                            "rate_limiting_methods": [
+                                "Token bucket algorithm",
+                                "Leaky bucket algorithm"
+                            ],
+                            "throttling_strategies": [
+                                "Per IP address",
+                                "Per user"
+                            ],
+                            "monitoring": "Regularly monitor API usage patterns to adjust rate limits as needed."
+                        },
+                        "citation_link": "https://www.sans.org/",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Low"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "OWASP Source Analysis Tools",
+        "data": {
+            "standard": "OWASP Source Analysis Tools",
+            "version": "2021",
+            "primary_url": "https://owasp.org/www-project-source-code-analysis-tools/",
+            "scope": [
+                "Developers",
+                "Security Engineers",
+                "Compliance Officers"
+            ],
+            "requirements": {
+                "Tool_Capabilities": {
+                    "MUST": {
+                        "requirement_id": "SA-1",
+                        "requirement_text": "Source code analysis tools MUST support scanning APIs for security vulnerabilities.",
+                        "requirement_abstract": "Source code analysis tools have to be capable of scanning APIs to identify security vulnerabilities specific to APIs.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "Developers"
+                        ],
+                        "severity": "High"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "SA-2",
+                        "requirement_text": "Source code analysis tools SHOULD provide recommendations on securing APIs.",
+                        "requirement_abstract": "Source code analysis tools should offer guidance and best practices for securing APIs identified as vulnerable.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Medium"
+                    },
+                    "MAY": {
+                        "requirement_id": "SA-3",
+                        "requirement_text": "Source code analysis tools MAY integrate with API testing tools.",
+                        "requirement_abstract": "Integration with API testing tools may enhance the overall security testing capabilities of the source code analysis tool.",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "DevOps Engineers"
+                        ],
+                        "severity": "Low"
+                    }
+                },
+                "Scan_Configuration": {
+                    "MUST": {
+                        "requirement_id": "SA-4",
+                        "requirement_text": "The tool interface MUST allow configuring custom API scan settings.",
+                        "requirement_abstract": "Users should be able to define specific parameters for the source code analysis tools to scan APIs effectively.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "Penetration Testers"
+                        ],
+                        "severity": "Medium"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "SA-5",
+                        "requirement_text": "The tool SHOULD support authentication mechanisms for scanning APIs.",
+                        "requirement_abstract": "Support for authentication mechanisms enables secure scanning of APIs that require authentication for testing.",
+                        "citation_link": "https://cheatsheetseries.owasp.org/cheatsheets/API_Security_Cheat_Sheet.html",
+                        "intended_audience": [
+                            "Security Engineers",
+                            "Developers"
+                        ],
+                        "severity": "Medium"
+                    },
+                    "MAY": {
+                        "requirement_id": "SA-6",
+                        "requirement_text": "The tool MAY provide compliance checks for API security standards.",
+                        "requirement_abstract": "Inclusion of compliance checks can help ensure APIs adhere to security standards and regulations.",
+                        "intended_audience": [
+                            "Compliance Officers",
+                            "Auditors"
+                        ],
+                        "severity": "Low"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "standard": "SANS CWE Top 25 Software Errors",
+        "data": {
+            "standard": "SANS CWE Top 25 Software Errors - API Security",
+            "version": "2021",
+            "primary_url": "https://cwe.mitre.org/top25/archive/2021/index.html",
+            "scope": [
+                "Developers",
+                "Security Engineers",
+                "API Designers"
+            ],
+            "requirements": {
+                "Insecure API Authentication": {
+                    "MUST": {
+                        "requirement_id": "API-1",
+                        "requirement_text": "Implement strong authentication mechanisms for all APIs.",
+                        "requirement_abstract": "APIs must use strong authentication mechanisms to prevent unauthorized access.",
+                        "requirement_details": "APIs must use strong authentication mechanisms such as OAuth 2.0 or API keys. OAuth 2.0 is an open standard for access delegation, commonly used for authorization. API keys are unique identifiers used to authenticate requests to an API.",
+                        "citation_link": "https://cwe.mitre.org/data/definitions/287.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "API-2",
+                        "requirement_text": "Implement multi-factor authentication (MFA) for sensitive APIs.",
+                        "requirement_abstract": "Sensitive APIs should require multi-factor authentication (MFA) to enhance security.",
+                        "requirement_details": "Sensitive APIs, especially those handling critical data or operations, should implement multi-factor authentication (MFA) to add an extra layer of security. MFA typically requires users to provide two or more verification factors to access the API.",
+                        "citation_link": "https://cwe.mitre.org/data/definitions/22.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers",
+                            "API Designers"
+                        ],
+                        "severity": "High"
+                    },
+                    "MAY": {
+                        "requirement_id": "API-3",
+                        "requirement_text": "Implement rate limiting and throttling for APIs.",
+                        "requirement_abstract": "APIs may implement rate limiting and throttling to mitigate DoS attacks and abuse.",
+                        "requirement_details": "Rate limiting and throttling mechanisms can help protect APIs from denial of service (DoS) attacks and abusive usage. By limiting the number of requests a client can make within a certain timeframe, API providers can improve security and prevent resource exhaustion.",
+                        "citation_link": "https://cwe.mitre.org/data/definitions/770.html",
+                        "intended_audience": [
+                            "Developers",
+                            "API Designers"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "Insecure API Authorization": {
+                    "MUST": {
+                        "requirement_id": "API-4",
+                        "requirement_text": "Enforce proper authorization controls on API endpoints.",
+                        "requirement_abstract": "APIs must enforce proper authorization mechanisms to restrict access to authorized users or roles.",
+                        "requirement_details": "APIs should enforce access controls such as role-based access control (RBAC) or attribute-based access control (ABAC) to ensure that only authorized users can interact with specific endpoints. This prevents unauthorized access to sensitive data or operations.",
+                        "citation_link": "https://cwe.mitre.org/data/definitions/285.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers",
+                            "API Designers"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "API-5",
+                        "requirement_text": "Implement proper session management for API authentication.",
+                        "requirement_abstract": "APIs should use secure session management techniques to maintain user authentication state.",
+                        "requirement_details": "APIs that rely on sessions for authentication should implement secure session management practices to protect session tokens from unauthorized access or session hijacking. Techniques like using secure cookies, session tokens with limited lifetimes, and session rotation can enhance security.",
+                        "citation_link": "https://cwe.mitre.org/data/definitions/384.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "High"
+                    },
+                    "MAY": {
+                        "requirement_id": "API-6",
+                        "requirement_text": "Implement access control lists (ACLs) for fine-grained authorization.",
+                        "requirement_abstract": "APIs may use access control lists (ACLs) to grant or restrict access based on specific permissions.",
+                        "requirement_details": "For complex authorization scenarios, APIs can benefit from using access control lists (ACLs) to define fine-grained permissions for different resources or operations. By assigning specific access rights to users or roles, APIs can achieve better control over who can perform certain actions.",
+                        "citation_link": "https://cwe.mitre.org/data/definitions/285.html",
+                        "intended_audience": [
+                            "Developers",
+                            "API Designers"
+                        ],
+                        "severity": "Medium"
+                    }
+                },
+                "Insecure API Data Handling": {
+                    "MUST": {
+                        "requirement_id": "API-7",
+                        "requirement_text": "Implement data encryption for sensitive API communication.",
+                        "requirement_abstract": "Sensitive data transmitted over APIs must be encrypted to protect confidentiality.",
+                        "requirement_details": "APIs should use secure communication protocols such as HTTPS/TLS to encrypt data transmitted between clients and servers. Encryption helps safeguard sensitive information from eavesdropping or tampering during transit.",
+                        "citation_link": "https://cwe.mitre.org/data/definitions/522.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Critical"
+                    },
+                    "SHOULD": {
+                        "requirement_id": "API-8",
+                        "requirement_text": "Implement proper input validation and output encoding to prevent injection attacks.",
+                        "requirement_abstract": "APIs should validate and sanitize input data to mitigate injection vulnerabilities.",
+                        "requirement_details": "APIs must validate and sanitize input data to prevent injection attacks such as SQL injection, NoSQL injection, and cross-site scripting (XSS). Proper input validation ensures that only expected data formats are accepted, while output encoding helps prevent malicious content from being executed in the response.",
+                        "citation_link": "https://cwe.mitre.org/data/definitions/20.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "High"
+                    },
+                    "MAY": {
+                        "requirement_id": "API-9",
+                        "requirement_text": "Implement data masking to protect sensitive information in API responses.",
+                        "requirement_abstract": "APIs may use data masking techniques to obscure or redact sensitive data in responses.",
+                        "requirement_details": "To protect sensitive information exposed in API responses, APIs can apply data masking techniques to hide or redact confidential data fields. By replacing sensitive data with masked values or tokens, APIs can limit the exposure of sensitive information to unauthorized parties.",
+                        "citation_link": "https://cwe.mitre.org/data/definitions/200.html",
+                        "intended_audience": [
+                            "Developers",
+                            "Security Engineers"
+                        ],
+                        "severity": "Medium"
+                    }
+                }
+            }
+        }
+    }
+]
